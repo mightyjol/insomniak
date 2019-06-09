@@ -1,6 +1,7 @@
 <script>
 	import { stores } from '@sapper/app'
 	import { onMount } from 'svelte'
+
  	import Nav from '../components/Nav.svelte'
 
 	let { session } = stores()
@@ -36,7 +37,10 @@
 	export let segment;
 </script>
 
-<Nav {segment}/>
+
+<svelte:head>
+	<title>Insomniak | Développeur Indépendant</title>
+</svelte:head>
 
 <main>
 	<slot></slot>
