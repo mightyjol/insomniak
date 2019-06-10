@@ -3,7 +3,10 @@
 	import { onMount } from 'svelte'
 
  	import Nav from '../components/Nav.svelte'
-
+ 	import Footer from '../components/Footer.svelte'
+	
+	export let segment;
+	
 	let { session } = stores()
 	let loading = false
 
@@ -32,16 +35,15 @@
 		}
 		
 	})
-	
-
-	export let segment;
 </script>
 
 
 <svelte:head>
-	<title>Insomniak | Développeur Indépendant</title>
+	<title>EasyBiz | Logiciel de caisse simplifié | pour PME et indépendants</title>
 </svelte:head>
 
+<Nav {segment} />
 <main>
 	<slot></slot>
 </main>
+<Footer />
